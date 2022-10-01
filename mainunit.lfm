@@ -1,0 +1,632 @@
+object Form1: TForm1
+  Left = 29
+  Height = 688
+  Top = 13
+  Width = 1293
+  Caption = 'RuTracker offline'
+  ClientHeight = 688
+  ClientWidth = 1293
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '2.2.2.0'
+  WindowState = wsMaximized
+  object edtQuery: TEdit
+    Left = 0
+    Height = 42
+    Hint = 'Введите запрос (одно слово или часть слова) и нажмите [Enter]. Для русских слов поиск регистрозависимый (Пушкин ≠ пушкин≠пУшкин)'
+    Top = 0
+    Width = 1293
+    Align = alTop
+    Alignment = taCenter
+    Font.Height = -24
+    Font.Name = 'Cantarell'
+    OnClick = edtQueryClick
+    OnKeyPress = edtQueryKeyPress
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    Text = 'Введите запрос (одно слово или часть слова) и нажмите [Enter]. Для русских слов поиск регистрозависимый (Пушкин ≠ пушкин≠пУшкин)'
+  end
+  object cmbCategory: TComboBox
+    Left = 0
+    Height = 36
+    Top = 42
+    Width = 1293
+    Align = alTop
+    Font.Height = -19
+    Font.Name = 'Cantarell'
+    ItemHeight = 36
+    ParentFont = False
+    TabOrder = 1
+    Text = 'Выберите категорию или поиск по всем торрентам (по умолчанию)'
+  end
+  object stgTorrentInfo: TStringGrid
+    Left = 0
+    Height = 589
+    Top = 78
+    Width = 1293
+    Align = alClient
+    ColumnClickSorts = True
+    FixedCols = 0
+    Font.Height = -16
+    Font.Name = 'Cantarell'
+    GridLineColor = clBlack
+    ParentFont = False
+    RowCount = 500
+    ScrollBars = ssVertical
+    TabOrder = 2
+    OnDblClick = stgTorrentInfoDblClick
+    OnPrepareCanvas = stgTorrentInfoPrepareCanvas
+    OnSelectCell = stgTorrentInfoSelectCell
+    ColWidths = (
+      32
+      790
+      97
+      248
+      112
+    )
+    RowHeights = (
+      23
+      23
+      23
+      23
+      23
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      31
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+      27
+    )
+    Cells = (
+      5
+      0
+      0
+      '№'
+      1
+      0
+      'Название'
+      2
+      0
+      'Размер, Мб'
+      3
+      0
+      'Форум/Категория'
+      4
+      0
+      'Дата'
+    )
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 21
+    Top = 667
+    Width = 1293
+    Font.Height = -16
+    Font.Name = 'Cantarell'
+    Panels = <    
+      item
+        Width = 50
+      end    
+      item
+        Width = 50
+      end>
+    ParentFont = False
+    SimplePanel = False
+  end
+  object RuTrackerCon: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'torrents.db3'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    AlwaysUseBigint = False
+    Left = 499
+    Top = 138
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = RuTrackerCon
+    Transaction = SQLTransaction1
+    Params = <>
+    Macros = <>
+    Left = 396
+    Top = 138
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = RuTrackerCon
+    Left = 602
+    Top = 138
+  end
+end
