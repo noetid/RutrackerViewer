@@ -1,0 +1,7 @@
+*.res
+*.exe
+*.compiled
+*.a
+*.o
+lib/
+backup/
